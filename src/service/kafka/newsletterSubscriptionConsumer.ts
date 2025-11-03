@@ -14,7 +14,7 @@ const kafka = new Kafka({
 const consumer = kafka.consumer({ groupId: "newsletter-group" });
 
 
-async function runConsumer() {
+export async function runConsumer() {
     await consumer.connect();
     await consumer.subscribe({
         topic: "newsletter-events",
