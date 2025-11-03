@@ -10,7 +10,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
 
   kafka:
-    image: confluentinc/cp-kafka:7.4.0  # Versão específica que funciona
+    image: confluentinc/cp-kafka:7.4.0  
     networks:
       - broker-kafka
     depends_on:
@@ -25,9 +25,6 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
-      # Remova estas se existirem:
-      # KAFKA_PROCESS_ROLES: ""
-      # KAFKA_CONTROLLER_LISTENER_NAMES: ""
 
   kafdrop:
     image: obsidiandynamics/kafdrop:latest
