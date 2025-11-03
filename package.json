@@ -6,7 +6,9 @@
   "scripts": {
     "start:server": "ts-node src/server.ts",
     "start:save-consumer": "ts-node src/service/kafka/newsletterSubscriptionConsumer.ts",
-    "start:email-consumer": "ts-node src/service/kafka/newsletterEmailConsumer.ts"
+    "start:email-consumer": "ts-node src/service/kafka/newsletterEmailConsumer.ts",
+    "test:cov": "jest --coverage",
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "Lara Rodrigues",
@@ -23,9 +25,13 @@
     "pino-pretty": "^13.1.2"
   },
   "devDependencies": {
+    "@jest/globals": "^30.2.0",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.9.1",
     "@types/pino": "^7.0.5",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
