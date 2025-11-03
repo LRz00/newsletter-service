@@ -33,3 +33,7 @@ async function runConsumer() {
         }
     })
 }
+
+runConsumer().catch((error) => {
+  logger.error("Error running Kafka consumer:", error.message);
+});
